@@ -29,24 +29,30 @@ export default function HomeScreen() {
   };
 
   return (
+    
     <View style={styles.container}>
       {/* Two Text Messages */}
-      <Text style={styles.headerText}>Civil Registry Portal</Text>
-      <Text style={styles.subText}>
-        Explore and manage your content with ease.
-      </Text>
 
+      
+      <Image style={styles.image1} source={require("@/assets/images/censuslogo.jpg")} />
+      <Text style={styles.headerText}>WELCOME TO</Text>
+    
+      <Image style={styles.image} source={require("@/assets/images/2024-Census-logo.png")} />
+      <Text style={styles.subText}>
+        JOIN THE 2024 NATIONAL POPULATION CENSUS
+      </Text>
       <TouchableOpacity style={styles.button} onPress={() => handleDashboard()}>
-        <Text style={styles.buttonText}>Data Entry</Text>
+        <Text style={styles.buttonText}>GET STARTED</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.buttonSecondary}
-        onPress={() => handleSignIn()}
-      >
-        <Text style={styles.buttonText}>Sign In</Text>
+        
+    >
+        
       </TouchableOpacity>
+      
     </View>
+    
   );
 }
 
@@ -59,37 +65,45 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: "#f5f5f5", // Light background for contrast against buttons
   },
+  image: {
+    width: 340,
+    height: 350,
+    resizeMode:  "contain",
+    marginBottom:  20,
+    marginTop: 10,
+  },
+  image1: {
+    width: 350,
+    height: 150,
+    resizeMode:  "contain",
+    marginBottom:  -20,
+    top: -10,
+
+  },
   headerText: {
-    fontSize: 30,
+    fontSize: 50,
     fontWeight: "bold",
     color: "#333",
     textAlign: "center",
-    marginBottom: 10,
+    marginBottom: -20,
+
   },
   subText: {
-    fontSize: 16,
+    fontSize: 14,
     color: "#666",
+    fontWeight: "bold",
+    justifyContent: "flex-end",
     textAlign: "center",
-    marginBottom: 40, // Space between text and buttons
+    marginBottom: 5, // Space between text and buttons
+    top: -30,
   },
   button: {
     backgroundColor: "#4CAF50", // Modern green color
     borderRadius: 12,
     paddingVertical: 15,
     paddingHorizontal: 50,
-    marginBottom: 20,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 5, // Elevation for Android
-  },
-  buttonSecondary: {
-    backgroundColor: "#2196F3", // Stylish blue for Sign In/Sign Up buttons
-    borderRadius: 12,
-    paddingVertical: 15,
-    paddingHorizontal: 50,
-    marginBottom: 20,
+    marginBottom: -10,
+    top: -10,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.3,

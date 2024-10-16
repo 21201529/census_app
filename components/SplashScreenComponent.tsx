@@ -41,9 +41,13 @@ const SplashScreenComponent = () => {
     <View style={styles.container}>
       {/* Animated Text with Emojis */}
       <Animated.View style={animatedStyle}>
-        <Text style={styles.emoji}>🚀</Text>
+        {/* <Text style={styles.emoji}>🚀</Text>
         <Text style={styles.text}>Welcome to PNG's One and Only</Text>
-        <Text style={styles.emoji}>✨🎉</Text>
+        <Text style={styles.emoji}>✨🎉</Text> */}
+        <Text style={styles.text}>Welcome to Census Form APP ✔✔</Text>
+        <Image source={require("@/assets/images/2024-Census-logo.png")}
+        style={styles.splash}
+        />
       </Animated.View>
     </View>
   );
@@ -53,20 +57,24 @@ const SplashScreenComponent = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#4CAF50", // Green background color for a modern splash
+    backgroundColor: "#FFFFFFFF", // Green background color for a modern splash
     justifyContent: "center",
     alignItems: "center",
   },
   text: {
     fontSize: 32,
     fontWeight: "bold",
-    color: "#fff", // White text for contrast
+    color: "#000000FF", // White text for contrast
     textAlign: "center",
     marginTop: 10,
   },
   emoji: {
     fontSize: 64, // Large emoji size
     textAlign: "center",
+  },
+  splash: {
+    width: 350,
+    height: 300,
   },
 });
 
